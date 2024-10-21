@@ -18,6 +18,16 @@
     color: var(--color-1);
 }
 
+.weather-box.scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(123, 74, 226, 0.9);
+    padding: 10px 20px;
+}
+
 .search__bar {
     display: flex;
     flex-direction: row;
@@ -27,12 +37,12 @@
     padding-top: 6px;
 }
 
+
 .weather__info {
     padding-top: 40px;
     display: flex;
     justify-content: space-between;
     margin: 0 23px 0 24px;
-
 }
 
 .numeric_info {
@@ -40,20 +50,138 @@
 }
 
 .degree__number {
-    font-size: 96px;
-    font-family: 'OpenSans_Condensed-Bold';
+    font-size: 72px;
+    font-weight: bold;
+    margin: 0;
 }
 
 .subtext__degreenumber {
-    font-size: 20px;
-    text-align: center;
-    text-justify: center;
+    font-size: 12px;
 }
 
-.weather-box__footer{
-    margin: auto 23px 24px 24px;
-    padding-top: 80px;
+.weather-icon {
+    width: 107px;
+    height: 107px;
+}
+
+.weather-box__footer {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
+    margin-top: 20px;
 }
+
+.content {
+    padding: 20px;
+}
+
+.options {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.options button {
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 116px;
+    height: 42px;
+}
+
+.options button.active {
+    background-color: var(--button-1);
+    color: var(--);
+}
+
+.weather-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card-icon {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.card-title {
+    font-size: 14px;
+    color: #666;
+}
+
+.card-value {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card-change {
+    font-size: 14px;
+}
+
+.decrease {
+    color: green;
+}
+
+.increase {
+    color: red;
+}
+
+.hourly-forecast {
+    background-color: white;
+    border-radius: 20px;
+    padding: 15px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+}
+
+.hourly-scroll {
+    display: flex;
+    gap: 20px;
+}
+
+.hourly-item {
+    text-align: center;
+    min-width: 60px;
+}
+
+.ten-day-forecast {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.forecast-day {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.air-quality, .weather-alerts {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.alert {
+    margin-bottom: 10px;
+}
+
